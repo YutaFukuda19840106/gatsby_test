@@ -1,6 +1,20 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
-export default () => (
+export default () => {
+    const data = useStaticQuery(graphql`
+    query {
+	  pattern: file(relativePath: { eq: "pattern.jpg" }) {
+		childImageSharp {
+		  fluid(maxWidth: 1920, quality: 90) {
+			...GatsbyImageSharpFluid_withWebp
+		  }
+		}
+	  }
+  }
+  `)
+  return(
     <footer className="footer">
 	<div className="container">
 		<div className="site">
@@ -41,3 +55,4 @@ export default () => (
 	</div>
 </footer>
 )
+}

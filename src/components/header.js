@@ -14,8 +14,8 @@ export default () => (
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="base-index.html">TOP</a></li>
-            <li><a href="base-about.html">ABOUT</a></li>
+            <li><a href="/">TOP</a></li>
+            <li><a href="/about/">ABOUT</a></li>
           </ul>
 		    </nav>
 	  </div>

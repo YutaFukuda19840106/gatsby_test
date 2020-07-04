@@ -2,15 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Header from "/components/header"
-import Footer from "/components/footer"
+import Layout from "../components/layout"
 
-const hello="こんにちは"
-
-export default({data}) => {
-  return <div>
-    
-<Header />
+export default({data}) => (    
+<Layout>
 <section className="hero">
 	<figure>
 		<Img fluid={data.hero.childImageSharp.fluid} alt="" style={{ height: "100%"}} />
@@ -70,10 +65,9 @@ export default({data}) => {
 	</figure>
 </section>
 
-<footer />
+</Layout>
 
-  </div>
-}
+)
 
 export const query = graphql`
 query {
@@ -108,14 +102,6 @@ query {
 	  berry: file(relativePath: { eq: "berry.jpg" }) {
 		childImageSharp {
 		  fluid(maxWidth: 1600) {
-			...GatsbyImageSharpFluid_withWebp
-		  }
-		}
-	  }
-
-	  pattern: file(relativePath: { eq: "pattern.jpg" }) {
-		childImageSharp {
-		  fluid(maxWidth: 1920, quality: 90) {
 			...GatsbyImageSharpFluid_withWebp
 		  }
 		}
