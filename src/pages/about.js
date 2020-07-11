@@ -5,13 +5,20 @@ import Layout from "../components/layout"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUtensils, faCheckSquare } from "@fortawesome/free-solid-svg-icons"
 
-export default({data}) => (    
+import SEO from "../components/seo"
+
+export default({data, location}) => (    
 <Layout>
-<div className="eyecatch">
-	<figure>
-		<Img fluid={data.about.childImageSharp.fluid} alt="ブルーベリー＆ヨーグルト" />
+  <SEO
+    pagetitle="ESSENTIALについて"
+    pagedesc="食べ物についての情報を発疹しているサイトです。"
+    pagepath={location.pathname}
+  />
+  <div className="eyecatch">
+    <figure>
+      <Img fluid={data.about.childImageSharp.fluid} alt="ブルーベリー＆ヨーグルト" />
     </figure>
-</div>
+  </div>
 
 <article className="content">
     <div className="container">

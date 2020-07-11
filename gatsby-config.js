@@ -6,6 +6,12 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `ESSENTIALS`,
+    description: `美味しい食材と食事を追求するサイト`,
+    lang: `ja`,
+    siteurl: `https://laughing-poitras-58d83b.netlify.app/`,
+  },
   plugins: [
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -16,5 +22,6 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    `gatsby-plugin-react-helmet`
   ],
 }
