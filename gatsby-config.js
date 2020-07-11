@@ -11,6 +11,7 @@ module.exports = {
     description: `美味しい食材と食事を追求するサイト`,
     lang: `ja`,
     siteurl: `https://laughing-poitras-58d83b.netlify.app/`,
+    keywords: `ESSENTIALS`,
   },
   plugins: [
     'gatsby-transformer-sharp',

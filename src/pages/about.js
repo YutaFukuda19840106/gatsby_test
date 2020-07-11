@@ -12,6 +12,7 @@ export default({data, location}) => (
   <SEO
     pagetitle="ESSENTIALについて"
     pagedesc="食べ物についての情報を発疹しているサイトです。"
+    pagekey="ESSENTIALについて"
     pagepath={location.pathname}
   />
   <div className="eyecatch">
