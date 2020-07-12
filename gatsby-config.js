@@ -10,8 +10,10 @@ module.exports = {
     title: `ESSENTIALS`,
     description: `美味しい食材と食事を追求するサイト`,
     lang: `ja`,
-    siteurl: `https://laughing-poitras-58d83b.netlify.app/`,
+    siteurl: `https://laughing-poitras-58d83b.netlify.app`,
     keywords: `ESSENTIALS`,
+    locale: `ja_JP`,
+    fbappid: `*****`,
   },
   plugins: [
     'gatsby-transformer-sharp',
@@ -23,6 +25,22 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ESSENTIALS エッセンシャルズ`,
+        short_name: `ESSENTIALS`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#477294`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+
+
+
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
