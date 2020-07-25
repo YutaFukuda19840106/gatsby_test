@@ -42,5 +42,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `3q16pyhf9n3k`,
+        accessToken: `ro-tsr8xB_u8Rdoav9nWqMIsHAcHDDPgyX-GGKAlXxw`,
+        host: process.env.CONTENTFUL_HOST,
+      },
+    },
   ],
 }
+
