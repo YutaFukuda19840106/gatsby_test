@@ -34,6 +34,8 @@ export default ({ pagetitle, pagedesc, pagekey, pagepath, pageimg, pageimgw, pag
   const imgurl = pageimg
     ? `${data.site.siteMetadata.siteUrl}${pageimg}`
     : `${data.site.siteMetadata.siteUrl}/thumb.jpg`
+    //    : props.blogimg || `${data.site.siteMetadata.siteUrl}/thumb.jpg`
+
 
   const imgw = pageimgw || 1280
   const imgh = pageimgh || 640
