@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     blogresult.data.allContentfulCategory.edges.forEach(({ node }) => {
       const catPostsPerPage = 4　//1ページに表示する記事の数
-      const catPosts = node.blogpost.length //カテゴリーに属した記事の総数
+      const catPosts = node.blogpost.Length //カテゴリーに属した記事の総数
       const catPages = Math.ceil(catPosts / catPostsPerPage) //カテゴリーページの総数
 
       Array.from({ length: catPages }).forEach((_, i) => {
